@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grapes and Greens</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* background: url('img/egg.jpeg'); */
+            background-size: cover;
+        }
+
+        body::before {
+            background: url('img/egg.jpeg');
+            content: "";
+            position: absolute;
+            width: 100%;
+            /* background-repeat: no-repeat; */
+            height: 1100px;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .left {
+            /* border: red solid 2px; */
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            top: 6px;
+            color: green;
+            background: white;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+        .mid {
+            border: green solid 2px;
+            display: block;
+            width: 33%;
+            margin: 10px auto;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .mid:hover {
+            border: black solid 3px;
+        }
+
+        .navbar li a:hover {
+            color: green;
+            font-style: italic;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 0px 25px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .right {
+            /* border: yellow solid 2px; */
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+            top: 10px;
+        }
+
+        .btn {
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            size: 20px;
+            padding: 5px;
+        }
+
+        .btn:hover {
+            color: white;
+            background: green;
+            border: white solid 3px;
+        }
+
+        .well {
+            border: black solid 3px;
+            display: block;
+            margin: 40px auto;
+            width: 80%;
+            padding: 30px;
+            text-align: center;
+            border-radius: 75px;
+            font-size: 50px;
+        }
+
+        .main {
+            border: white solid 2px;
+            margin: 10px 175px;
+        }
+
+        .div {
+            /* border: black solid 2px; */
+            margin: 32px;
+            width: 922px;
+        }
+
+        .veg {
+            border: white solid 2px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .veg:hover {
+            border: green solid 3px;
+            color: white;
+        }
+
+        .veg img {
+            width: 250px;
+            margin: 20px;
+        }
+
+        .veg div {
+            width: 50%;
+            margin: auto;
+            padding: 0px 52px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .fruit {
+            border: white solid 2px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .fruit:hover {
+            border: green solid 3px;
+            color: white;
+        }
+
+        .fruit img {
+            width: 250px;
+            /* border: red solid 2px; */
+            margin: 20px;
+        }
+
+        .fruit div {
+            /* border: red solid 2px; */
+            width: 50%;
+            margin: auto;
+            padding: 0px 52px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .bread {
+            border: white solid 2px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .bread:hover {
+            border: green solid 3px;
+            color: white;
+        }
+
+        .bread img {
+            width: 250px;
+            /* border: red solid 2px; */
+            margin: 20px;
+        }
+
+        .bread div {
+            /* border: red solid 2px; */
+            width: 50%;
+            margin: auto;
+            padding: 0px 52px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .dryfruit {
+            border: solid white 2px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .dryfruit:hover {
+            border: green solid 3px;
+            color: white;
+        }
+
+        .dryfruit img {
+            width: 250px;
+            /* border: red solid 2px; */
+            margin: 20px;
+        }
+
+        .dryfruit div {
+            /* border: red solid 2px; */
+            width: 50%;
+            margin: auto;
+            padding: 0px 52px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .milk {
+            border: white solid 2px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .milk:hover {
+            border: green solid 3px;
+            color: white;
+        }
+
+        .milk img {
+            width: 250px;
+            /* border: red solid 2px; */
+            margin: 20px;
+        }
+
+        .milk div {
+            /* border: red solid 2px; */
+            width: 50%;
+            margin: auto;
+            padding: 0px 52px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .butter {
+            border: white solid 2px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .butter:hover {
+            border: green solid 3px;
+            color: white;
+        }
+
+        .butter img {
+            width: 250px;
+            /* border: red solid 2px; */
+            margin: 20px;
+        }
+
+        .butter div {
+            /* border: red solid 2px; */
+            width: 50%;
+            margin: auto;
+            padding: 0px 52px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #home {
+            color: green;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="head">
+        <div class="left">
+            <p>Grapes and Greens</p>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="a" id="home">Home</a></li>
+                <li><a href="a">About Us</a></li>
+                <li><a href="a">Cart</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Contact Us</button>
+            <button class="btn">Review</button>
+        </div>
+    </header>
+    <div class="well">
+        Welcome to Our Grocery store
+    </div>
+    <main class="main">
+        <div class="div">
+
+            <div class="veg">
+                <!-- <a href="veg"> -->
+                <img src="img/Veg.jpeg" alt="">
+                <div>Vegitable</div>
+                <!-- </a> -->
+            </div>
+
+            <div class="fruit">
+                <!-- <a href="fruit"> -->
+                <img src="img/fruit.jpeg" alt="">
+                <div>Fruit</div>
+                <!-- </a> -->
+            </div>
+
+            <div class="bread">
+                <!-- <a href="bread"> -->
+                <img src="img/bread.jpeg" alt="">
+                <div>Bread</div>
+                <!-- </a> -->
+            </div>
+
+            <div class="dryfruit">
+                <!-- <a href="dryfruit"> -->
+                <img src="img/dryfruit.jpeg" alt="">
+                <div>Dryfruit</div>
+                <!-- </a> -->
+            </div>
+
+            <div class="milk">
+                <!-- <a href="milk"> -->
+                <img src="img/milk.jpeg" alt="">
+                <div>Milk</div>
+                <!-- </a> -->
+            </div>
+
+            <div class="butter">
+                <!-- <a href="butter"> -->
+                <img src="img/butter.jpeg" alt="">
+                <div>Butter</div>
+                <!-- </a> -->
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
